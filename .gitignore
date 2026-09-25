@@ -1,0 +1,16 @@
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# node (for later frontend)
+node_modules/
+.expo/
+dist/
+
+# os / ide
+.DS_Store
+.idea/
+.vscode/
