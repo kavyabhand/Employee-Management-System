@@ -5,6 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from app.database import Base, engine
 from app.models import Employee  # noqa: F401
+from app.routers import employees
 
 
 @asynccontextmanager
@@ -22,6 +23,8 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+app.include_router(employees.router)
 
 
 @app.get("/health")
